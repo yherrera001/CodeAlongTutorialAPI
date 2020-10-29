@@ -9,7 +9,7 @@ import java.util.List;
 public interface CourseRepo extends CrudRepository<Course, String> {
 
 //creating a method that takes in a topic id and returns a list of courses
-    @Query(nativeQuery = true, value = "SELECT * FROM COURSE WHERE topic_topic_id = ?1")
+    @Query(nativeQuery = true, value = "SELECT * FROM COURSE WHERE topic_id = ?1")
     public List<Course> findByTopicId(String topicId);
 
 }
